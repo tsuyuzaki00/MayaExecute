@@ -1,9 +1,7 @@
-#import maya.cmds as cmds
 import sys
 import os
-sys.path.append(os.path.dirname(os.path.abspath(os.path.dirname(__file__))))
-
-from . import mayaRender as mr
+sys.path.append(os.path.abspath(".."))
+from MayaLibrary import mayaRender as mr
 
 def main():
     cam1 = mr.createPhotographSet(name = 'front', trs = (2.883, 76.78, 335.096), rot = (0.0, 0.0, 0.0))
