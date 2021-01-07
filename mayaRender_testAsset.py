@@ -9,4 +9,4 @@ def main():
     cam3 = mr.createPhotographSet(name = 'persp', trs = (213.072, 216.63, 205.637,), rot = (-25.01, 44.044, -0.0))
     cams = [cam1, cam2, cam3]
     for cam in cams:
-        mr.shotImages(cameraShape = cam, imageName = cam[0], workSpacePath="D:/Maya")
+        mr.shotImages(cameraShape = cam, imageName = cam[0], workSpacePath="D:/ShotgunExportMaya/testAsset")
