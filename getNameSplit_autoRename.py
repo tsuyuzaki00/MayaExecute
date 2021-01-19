@@ -7,7 +7,7 @@ from MayaLibrary import getNameSplit as gns
 def main():
     sels = pm.selected()
     for sel in sels:
-        scene = gns.scene(sel)
+        scene = gns.scene()
         node = gns.node(sel)
         obj = gns.obj(sel)
         pos = gns.pos(sel)
