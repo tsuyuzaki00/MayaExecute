@@ -3,4 +3,5 @@ import os
 sys.path.append(os.path.abspath(".."))
 from MayaLibrary import createNodes as cn
 
-cn.choiceNode(create = 'polyCube', name = 'model')
+def main():
+    cn.choiceNode(create = 'polyCube', name = 'model')
