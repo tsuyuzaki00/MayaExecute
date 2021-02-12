@@ -6,12 +6,13 @@ from MayaLibrary import getNameSplit as gns
 
 def main():
     sels = pm.selected()
+    getNameSplit = gns.GetNameSplit()
     for sel in sels:
-        scene = gns.scene()
-        node = gns.node(sel)
-        obj = gns.obj(sel)
-        pos = gns.pos(sel)
-        num = gns.num(sel)
+        scene = getNameSplit.scene()
+        node = getNameSplit.node(sel)
+        obj = getNameSplit.obj(sel)
+        pos = getNameSplit.pos(sel)
+        num = getNameSplit.num(sel)
         lists = [pos,obj,node,scene,num]
         names = [l for l in lists if l != '']
         autoRename = '_'.join(names)
