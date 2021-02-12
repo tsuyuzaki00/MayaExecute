@@ -4,4 +4,5 @@ sys.path.append(os.path.abspath(".."))
 from MayaLibrary import createNodes as cn
 
 def main():
-    cn.choiceNode(create = 'imagePlane', name = 'file')
+    node = cn.CreateNode(name = 'model')
+    node.imagePlaneNode()

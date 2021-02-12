@@ -1,7 +1,9 @@
+from MayaLibrary.getNameSplit import node
 import sys
 import os
 sys.path.append(os.path.abspath(".."))
 from MayaLibrary import createNodes as cn
 
 def main():
-    cn.choiceNode(create = 'polyCube', name = 'model')
+    node = cn.CreateNode(name = 'model')
+    node.polyCubeNode()

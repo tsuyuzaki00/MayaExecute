@@ -4,4 +4,5 @@ sys.path.append(os.path.abspath(".."))
 from MayaLibrary import createNodes as cn
 
 def main():
-    cn.choiceNode(create = 'pointLight', name = 'cut')
+    node = cn.CreateNode(name = 'model')
+    node.pointLightNode()
