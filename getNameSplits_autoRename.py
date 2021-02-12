@@ -16,4 +16,6 @@ def main():
         lists = [pos,obj,node,scene,num]
         names = [l for l in lists if l != '']
         autoRename = '_'.join(names)
-        pm.rename(sel, autoRename)
+        if sel != autoRename:
+            trueRename = getNameSplit.sameNameCheck(check = autoRename)
+            pm.rename(sel, trueRename)

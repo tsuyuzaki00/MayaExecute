@@ -1,5 +1,7 @@
 from maya import cmds
 
+#modelingLists = {'label': '', 'icon': '.png', 'command':''}
+
 def main():
     cmds.menu(l = 'Custom Tools', p ='MayaWindow', to = True)
 
@@ -38,8 +40,8 @@ def main():
     cmds.menuItem( label='DirectionalLight', i = 'directionallight.png', c = 'from MayaExecute import createNodes_directionalLight as ps; reload(ps); ps.main()' )
     cmds.menuItem( label='PointLight', i = 'pointlight.png', c = 'from MayaExecute import createNodes_pointLight as ps; reload(ps); ps.main()' )
     cmds.menuItem( label='SpotLight',  i = 'spotlight.png', c = 'from MayaExecute import createNodes_spotLight as ps; reload(ps); ps.main()' )
-    cmds.menuItem( label='Locator', i = 'locator.png', c = 'from createRenames import spaceLocatorCreateRename as ps; reload(ps); ps.main()' )
-    cmds.menuItem( label='Joint', i = 'kinJoint.png', c = 'from createRenames import jointCreateRename as ps; reload(ps); ps.main()' )
+    cmds.menuItem( label='Locator', i = 'locator.png', c = 'from mainEdit import spaceLocatorCreateRename as ps; reload(ps); ps.main()' )
+    cmds.menuItem( label='Joint', i = 'kinJoint.png', c = 'from mainEdit import jointCreateRename as ps; reload(ps); ps.main()' )
     cmds.setParent( '..', menu=True )
     
     cmds.menuItem( subMenu=True, label='ModelingEdit', to = True)
@@ -58,17 +60,17 @@ def main():
     cmds.setParent( '..', menu=True )
     
     cmds.menuItem( subMenu=True, label='CreateCurves', to = True)
-    cmds.menuItem( label='Antenna', c = 'from mayaPyCurves import curveAntenna as ps; reload(ps); ps.main()' )
-    cmds.menuItem( label='Arrow1', c = 'from mayaPyCurves import curveArrow1 as ps; reload(ps); ps.main()' )
-    cmds.menuItem( label='Arrow2', c = 'from mayaPyCurves import curveArrow2 as ps; reload(ps); ps.main()' )
-    cmds.menuItem( label='Arrow4', c = 'from mayaPyCurves import curveArrow4 as ps; reload(ps); ps.main()' )
-    cmds.menuItem( label='Circle', c = 'from mayaPyCurves import curveCircle as ps; reload(ps); ps.main()' )
-    cmds.menuItem( label='Cube', c = 'from mayaPyCurves import curveCube as ps; reload(ps); ps.main()' )
-    cmds.menuItem( label='Hexagon', c = 'from mayaPyCurves import curveHexagon as ps; reload(ps); ps.main()' )
-    cmds.menuItem( label='Pyramid', c = 'from mayaPyCurves import curvePyramid as ps; reload(ps); ps.main()' )
-    cmds.menuItem( label='Square', c = 'from mayaPyCurves import curveSquare as ps; reload(ps); ps.main()' )
-    cmds.menuItem( label='Twist', c = 'from mayaPyCurves import curveTwist as ps; reload(ps); ps.main()' )
-    cmds.menuItem( label='VectorIK', c = 'from mayaPyCurves import curveVectorIK as ps; reload(ps); ps.main()' )
+    cmds.menuItem( label='Antenna', c = 'from MayaExecute import setCurves_antenna as ps; reload(ps); ps.main()' )
+    cmds.menuItem( label='Arrow1', c = 'from MayaExecute import setCurves_arrow1 as ps; reload(ps); ps.main()' )
+    cmds.menuItem( label='Arrow2', c = 'from MayaExecute import setCurves_arrow2 as ps; reload(ps); ps.main()' )
+    cmds.menuItem( label='Arrow4', c = 'from MayaExecute import setCurves_arrow4 as ps; reload(ps); ps.main()' )
+    cmds.menuItem( label='Circle', c = 'from MayaExecute import setCurves_circle as ps; reload(ps); ps.main()' )
+    cmds.menuItem( label='Cube', c = 'from MayaExecute import setCurves_cube as ps; reload(ps); ps.main()' )
+    cmds.menuItem( label='Hexagon', c = 'from MayaExecute import setCurves_hexagon as ps; reload(ps); ps.main()' )
+    cmds.menuItem( label='Pyramid', c = 'from MayaExecute import setCurves_pyramid as ps; reload(ps); ps.main()' )
+    cmds.menuItem( label='Square', c = 'from MayaExecute import setCurves_square as ps; reload(ps); ps.main()' )
+    cmds.menuItem( label='Twist', c = 'from MayaExecute import setCurves_twist as ps; reload(ps); ps.main()' )
+    cmds.menuItem( label='VectorIK', c = 'from MayaExecute import setCurves_vectorIK as ps; reload(ps); ps.main()' )
     cmds.setParent( '..', menu=True )
 
     cmds.menuItem( subMenu=True, label='Constraint', to = True )

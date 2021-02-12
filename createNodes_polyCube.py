@@ -1,4 +1,3 @@
-from MayaLibrary.getNameSplit import node
 import sys
 import os
 sys.path.append(os.path.abspath(".."))
